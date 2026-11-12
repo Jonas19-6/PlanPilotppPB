@@ -25,7 +25,7 @@ RUN apt-get update && \
 
 # Copy backend files
 COPY --from=fasb /wheels /tmp/wheels
-RUN pip install --no-chache-dir /tmp/wheels/*.whl && rm -rf /tmp/wheels
+RUN pip install --no-cache-dir /tmp/wheels/*.whl && rm -rf /tmp/wheels
 
 COPY . . 
 # Install Python dependencies
