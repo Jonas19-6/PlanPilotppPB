@@ -8,7 +8,7 @@ RUN apt-get update && \
 RUN curl -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain 1.88.0
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-RUN pip install --no-cache-dir "maturin>=17, <2.0"
+RUN pip install --no-cache-dir "maturin>=1.7, <2.0"
 
 COPY lib/fasb /fasb
 WORKDIR /fasb
